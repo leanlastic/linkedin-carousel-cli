@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "linkedin-carousel-cli"
+version = "0.1.0"
+description = "CLI to convert PNG/JPG images into a LinkedIn-ready PDF carousel (1080x1080 or 1080x1350)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Your Name"}]
+dependencies = [
+    "Pillow>=10.0.0",
+    "typer>=0.12.3",
+    "rich>=13.7.1",
+    "natsort>=8.4.0"
+]
+
+[project.scripts]
+carousel-pdf = "carousel_pdf.cli:app"
