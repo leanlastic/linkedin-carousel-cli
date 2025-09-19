@@ -15,7 +15,7 @@ from PIL import Image, ImageOps, ImageColor
 app = typer.Typer(add_completion=False, help="""
 Convert PNG/JPG images to a LinkedIn-ready PDF carousel.
 
-Defaults to 1080x1350 (portrait, 4:5). Use --square for 1080x1080 (1:1).
+Defaults to 1200x1500 (portrait, 4:5). Use --square for 1080x1080 (1:1).
 """)
 console = Console()
 
@@ -91,7 +91,7 @@ def main(
 ):
     """Build a LinkedIn-ready PDF carousel from images.
 
-    All pages will share the same size (default 1080x1350). Images are natural-sorted.
+    All pages will share the same size (default 1200x1500). Images are natural-sorted.
     """
     if (width is None) ^ (height is None):
         raise typer.BadParameter("If you set --width or --height, you must set both.")
@@ -100,7 +100,7 @@ def main(
         if square:
             target_w, target_h = 1080, 1080
         else:
-            target_w, target_h = 1080, 1350
+            target_w, target_h = 1200, 1500
     else:
         target_w, target_h = width, height
 

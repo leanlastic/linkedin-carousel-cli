@@ -2,13 +2,13 @@
 
 A tiny Python CLI that converts a folder (or list) of PNG/JPG images into a **LinkedIn-ready PDF carousel**.
 
-- Defaults to `1080x1350` (portrait, 4:5) which performs great on mobile.
+- Defaults to `1200x1500` (portrait, 4:5) which is the optimal LinkedIn carousel size.
 - Supports `1080x1080` (square, 1:1) via `--square`.
 - Pads (letterboxes) smaller images without stretching by default.
 - Optional crop/fill strategies, margins, background, JPEG quality control.
 - Natural filename sorting (e.g., `2` comes before `10`).
 
-> Why 1080x1350 or 1080x1080? These are widely recommended for LinkedIn carousels in 2024/2025 guides. See Sendible, Oktopost, etc.
+> Why 1200x1500 or 1080x1080? The 1200x1500 size is specifically recommended for LinkedIn carousels, while 1080x1080 works for square formats. See LinkedIn best practices guides.
 
 ## Install (local)
 
@@ -28,7 +28,7 @@ python -m carousel_pdf.cli --help
 ## Usage
 
 ```bash
-# Basic: Convert images in ./slides to a PDF called out.pdf (portrait 1080x1350)
+# Basic: Convert images in ./slides to a PDF called out.pdf (portrait 1200x1500)
 carousel-pdf ./slides -o out.pdf
 
 # Square format (1080x1080)
